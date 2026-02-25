@@ -1,0 +1,18 @@
+.section {
+    height: 100vh;
+    padding: 50px;
+
+    background-color: black;
+    background-image: url('../../../public/images/LandingPageBG.svg'), url('../../../public/images/LandingPageBG2.svg');
+    background-position: center, center;
+    background-repeat: no-repeat, no-repeat;
+}
+
+.title {
+    color : white;
+    font-size: 72px;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    line-height: 100vh;
+}
