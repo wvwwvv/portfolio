@@ -7,3 +7,36 @@
 p {
     color: white;
 }
+
+.title {
+    text-align: center;
+    color : #FFCF0F;
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 76px;
+}
+
+.content {
+    display: flex;
+
+}
+
+.profile_info {
+    margin-left: 100px;
+}
+
+.profile_image {
+    width:300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-left: 100px;
+    line-height: 100vh;
+    margin-top: 72px;
+
+}
+
+.experience {
+    display: flex;
+    margin-bottom: 60px;
+}

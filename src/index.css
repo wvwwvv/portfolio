@@ -28,9 +28,7 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
-body {
-  line-height: 1;
-}
+
 ol, ul {
   list-style: none;
 }
@@ -47,7 +45,10 @@ table {
   border-spacing: 0;
 }
 
+
+/* 아래를 App.module.css 에 적었는데, vercel 배포할 때 적용이 안됨 */
 body {
+  line-height: 1;
   background-color: black;
   color: white;
   font-family: 'Inter', 'sans-serif';
