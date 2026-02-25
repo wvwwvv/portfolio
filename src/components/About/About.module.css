@@ -1,0 +1,9 @@
+.section {
+    background-color: black;
+    height: 100vh;
+    padding: 50px;
+}
+
+p {
+    color: white;
+}

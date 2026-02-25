@@ -1,6 +1,8 @@
 import {supabase} from "../../api/supabase.ts";
 import {useQuery} from "@tanstack/react-query";
 import type {Profile} from "../../types/Profile.ts";
+import styles from './About.module.css'
+
 
 const About = () => {
 
@@ -22,7 +24,7 @@ const About = () => {
 
     return (
 
-        <section id="about" style={{height: '100vh', padding: '50px', margin : '10px', border: '1px solid #ccc' }}>
+        <section id="about" className={styles.section}>
             <h1>안녕하세요</h1>
 
             <img

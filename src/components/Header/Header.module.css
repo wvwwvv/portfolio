@@ -31,6 +31,14 @@
     color: white;
 }
 
-.nav a:hover {
+.nav a:hover,
+.logo:hover{
+    color: #FFCF0F;
+}
+
+/* 외부 라이브러리 (Scroll Link 가 주입한 active는 css modules 내에서 바로 사용할 수 없음
+:global 로 active 접근
+ active 클래스는 spy={true} 로 인해 현재 보고 있는 id의 페이지에 active 클래스 주입한 것임 */
+.nav :global(.active) {
     color: #FFCF0F;
 }

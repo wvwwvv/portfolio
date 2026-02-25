@@ -4,7 +4,14 @@
   padding: 2rem;
 }
 
-body {
+
+/*body {
   background-color: black;
   color: white;
+  font-family: 'Inter', 'sans-serif';
+}*/
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./fonts/Inter_Regular.ttf');
 }
