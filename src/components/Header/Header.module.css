@@ -31,8 +31,14 @@
     color: white;
 }
 
+/* a 는 ScrollLink 에 내장된 것 */
 .nav a:hover,
 .logo:hover{
+    color: #FFCF0F;
+}
+
+
+span:hover {
     color: #FFCF0F;
 }
 

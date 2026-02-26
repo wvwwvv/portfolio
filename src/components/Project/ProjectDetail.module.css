@@ -1,0 +1,17 @@
+.section {
+    background-color: black;
+    min-height: 100vh;
+    padding: 70px 50px 50px 50px;
+    border: 1px solid white;
+}
+
+.images_container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap; /* ? */
+}
+
+.detail_image {
+    width: 70%;
+    height: 70%;
+}

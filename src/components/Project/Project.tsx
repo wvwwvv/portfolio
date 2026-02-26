@@ -2,8 +2,11 @@ import styles from './Project.module.css'
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "../../api/supabase.ts";
 import type {Projects} from "../../types/Projects.ts";
+import {useNavigate} from "react-router-dom";
 
 const Project = () => {
+
+    const navigate = useNavigate();
 
     const {data: projects, isLoading, error} = useQuery<Projects[]>({
         queryKey: ['projects'],
@@ -29,7 +32,9 @@ const Project = () => {
                     ?.map((item, index) => (
 
                          /* 한 프로젝트 설명 전체, even 번째 프로젝트면 오른쪽 끝에 맞춤 */
-                         <div key={item.id} className={index % 2 === 0 ? styles.content_even : styles.content_odd}>
+                         <div key={item.id} className={index % 2 === 0 ? styles.content_even : styles.content_odd}
+                              onClick={() => navigate(`/projects/${item.id}`)} style={{cursor : 'pointer'}}
+                         >
                              <div className={styles.texts}> {/*이미지 좌측. 제목과 설명*/}
                                  <p className={styles.project_title}>{item.title}</p>
                                  <p className={styles.description}>{item.description}</p>
