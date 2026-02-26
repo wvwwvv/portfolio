@@ -30,8 +30,6 @@ const About = () => {
         }
     });
 
-
-
     if (isProfileLoading || isExperienceLoading) return <p>로딩 중...</p>;
     if (pError || eError) return <p>에러가 발생했습니다.</p>;
 

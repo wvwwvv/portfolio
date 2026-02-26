@@ -1,0 +1,93 @@
+.section {
+    background-color: black;
+    height: 100vh;
+    padding: 50px;
+    border : 1px solid white;
+}
+
+.title {
+    text-align: center;
+    color : #FFCF0F;
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 68px;
+}
+
+.icon_wrapper {
+    width: 64px;
+    height: 64px;
+    background-color: #252131;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+
+
+}
+
+.skills_icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.skills_row {
+    display: flex;
+    height: 80px;
+    margin-bottom: 20px;
+    align-items: center;
+
+
+}
+
+img {
+    /*
+    border-radius: 50%;
+    */
+}
+
+.skill_category {
+    font-weight: bold;
+    font-size: 20px;
+    align-items: center;
+    display: flex;
+    height: 40px;
+    margin-left: 100px;
+}
+
+.skills_container {
+    flex:1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 50px;
+}
+
+.skills {
+    display: flex;
+}
+
+
+.all_contents {
+
+    width: 80%;
+    height: 60%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../../../public/images/skills_content_background.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.all_skills {
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
