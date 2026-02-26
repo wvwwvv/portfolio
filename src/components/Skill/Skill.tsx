@@ -1,12 +1,12 @@
 import styles from './Skill.module.css'
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "../../api/supabase.ts";
-import type {Skill} from "../../types/Skill.ts";
+import type {Skills} from "../../types/Skills.ts";
 
 
 const Skill = () => {
 
-    const {data: skills, isLoading, error} = useQuery<Skill[]>({
+    const {data: skills, isLoading, error} = useQuery<Skills[]>({
         queryKey: ['skills'],
         queryFn: async () => {
             const {data, error} = await supabase
