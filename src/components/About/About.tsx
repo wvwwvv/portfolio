@@ -2,7 +2,7 @@ import {supabase} from "../../api/supabase.ts";
 import {useQuery} from "@tanstack/react-query";
 import type {Profile} from "../../types/Profile.ts";
 import styles from './About.module.css'
-import type {Experience} from "../../types/experience.ts";
+import type {Experience} from "../../types/Experience.ts";
 
 
 const About = () => {

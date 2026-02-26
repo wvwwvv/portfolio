@@ -2,7 +2,6 @@
     background-color: black;
     height: 100vh;
     padding: 50px;
-    border : 1px solid white;
 }
 
 .title {
@@ -38,8 +37,6 @@
     height: 80px;
     margin-bottom: 20px;
     align-items: center;
-
-
 }
 
 img {
