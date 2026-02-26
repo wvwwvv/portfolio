@@ -4,7 +4,6 @@ import styles from './Header.module.css'
 
 const Header = () => {
 
-
     return(
         <header className={styles.header}>
             <nav className={styles.logo}>
@@ -18,13 +17,9 @@ const Header = () => {
                 <ScrollLink to="blog" spy={true} smooth={true} offset={-70} duration={400}>Blogs</ScrollLink>
                 <ScrollLink to="dtt" spy={true} smooth={true} offset={-70} duration={400}>DTT</ScrollLink>
                 <ScrollLink to="contact" spy={true} smooth={true} offset={-70} duration={400}>Contact</ScrollLink>
-
-
-
             </nav>
         </header>
     )
 }
 
 export default Header;
-
