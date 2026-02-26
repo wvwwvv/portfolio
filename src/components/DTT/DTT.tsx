@@ -1,10 +1,26 @@
-const DTT = () => {
+import styles from './DTT.module.css'
+import {useNavigate} from "react-router-dom";
+const Contact = () => {
+
+    const navigate = useNavigate();
+
     return (
 
-        <section id="dtt" style={{ height: '100vh', padding: '50px', margin: '10px', border: '1px solid #ccc' }}>
-            <h1>DTT 검사할래요?</h1>
+        <section id="dtt" className={styles.section}>
+            <h1 className={styles.title}>Developer Type Test</h1>
+
+            <p className={styles.explain}>나의 개발자 유형은 무엇일까?</p>
+
+            <button
+                onClick={() => navigate(`/dtt/test`)}
+                style={{cursor: 'pointer'}}
+                className={styles.test_button}
+            >확인하기</button>
         </section>
     );
 };
 
-export default DTT;
+
+
+export default Contact;
+
