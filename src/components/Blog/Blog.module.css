@@ -1,0 +1,31 @@
+.section {
+    background-color: black;
+    min-height: 100vh;
+    padding: 50px;
+    border: 1px solid white;
+
+}
+
+.title {
+    border: 1px solid white;
+    text-align: center;
+    color : #FFCF0F;
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 68px;
+}
+
+.blog_container {
+    border: 1px solid white;
+
+    display: flex;
+    overflow-x: auto;
+    gap: 30px;
+    padding: 20px 0;
+    scroll-behavior: smooth;
+    /*스크롤 바 감추기*/
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+}

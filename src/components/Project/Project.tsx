@@ -1,11 +1,11 @@
 import styles from './Project.module.css'
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "../../api/supabase.ts";
-import type {Project} from "../../types/Projects.ts";
+import type {Projects} from "../../types/Projects.ts";
 
 const Project = () => {
 
-    const {data: projects, isLoading, error} = useQuery<Project[]>({
+    const {data: projects, isLoading, error} = useQuery<Projects[]>({
         queryKey: ['projects'],
         queryFn: async () => {
             const {data, error} = await supabase
