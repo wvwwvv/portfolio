@@ -11,11 +11,11 @@ const Contact = () => {
 
             <p className={styles.explain}>나의 개발자 유형은 무엇일까?</p>
 
-            <button
+            <div
                 onClick={() => navigate(`/dtt/test`)}
                 style={{cursor: 'pointer'}}
                 className={styles.test_button}
-            >확인하기</button>
+            >확인하기</div>
         </section>
     );
 };

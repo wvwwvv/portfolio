@@ -1,8 +1,56 @@
+import styles from "./Contact.module.css";
+import {useQuery} from "@tanstack/react-query";
+import {supabase} from "../../api/supabase.ts";
+import type {ContactInfo} from "../../types/ContactInfo.ts";
+
 const Contact = () => {
+
+    const {data: contact, isLoading, error} = useQuery<ContactInfo>({
+        queryKey: ['contact'],
+        queryFn: async () => {
+            const {data, error} = await supabase
+                .from('contact')
+                .select('*')
+                .single()
+            if (error) throw error;
+            return data;
+        }
+    });
+
+    if (isLoading) return <p>로딩 중...</p>;
+    if (error) return <p>에러가 발생했습니다.</p>;
+
     return (
 
-        <section id="contact" style={{ height: '100vh', padding: '50px', margin: '10px', border: '1px solid #ccc' }}>
-            <h1>Contact page</h1>
+        <section id="contact" className={styles.section}>
+            <h1 className={styles.title}>Contact</h1>
+
+            <div className={styles.contact_footer}>
+                <div className={styles.icons}>
+                    <a
+                        className={styles.instagram_icon}
+                        href={contact?.instagram_url}
+                        target="_blank"
+                        title="To Instagram"
+                    ></a>
+                    <a
+                        className={styles.github_icon}
+                        href={contact?.github_url}
+                        target="_blank"
+                        title="To Github"
+                    ></a>
+                    <a
+                        className={styles.email_icon}
+                        href={`mailto:${contact?.email}`}
+                        title="send email"
+                    ></a>
+                </div>
+                <div
+                    className={styles.copyrights}
+                >
+                    Copyright @ 강상민 All Rights Reserved.
+                </div>
+            </div>
         </section>
     );
 };

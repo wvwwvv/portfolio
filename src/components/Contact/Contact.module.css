@@ -1,0 +1,70 @@
+.section {
+    height: 90vh;
+    padding: 50px 50px 100px 50px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title {
+    text-align: center;
+    color : #FFCF0F;
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 68px;
+
+}
+
+.contact_footer {
+    background-color : black;
+    box-shadow:
+            0 -15px 40px rgba(255, 207, 15, 0.15), /* 상단: 은은한 노란색 */
+            0 15px 40px rgba(255, 207, 15, 0.15);  /* 하단: 은은한 노란색 */
+    padding: 36px 0;
+
+}
+
+
+.icons {
+    margin: 5px auto;
+    width: fit-content;
+    display: flex;
+    gap: 28px;
+}
+
+.copyrights {
+    font-size: 8px;
+    color: grey;
+    margin: 24px auto 0 auto;
+    width: fit-content;
+}
+
+.instagram_icon {
+    background-image: url("../../../public/images/instagram.svg");
+    background-size: contain;   /* 이미지가 잘리지 않게 */
+    background-position: center;
+    width: 28px;
+    height: 28px;
+    background-repeat: no-repeat;
+}
+
+.github_icon {
+    background-image: url("../../../public/images/github.svg");
+    background-size: contain;   /* 이미지가 잘리지 않게 */
+    background-position: center;
+    width: 28px;
+    height: 28px;
+    background-repeat: no-repeat;
+}
+
+.email_icon {
+    background-image: url("../../../public/images/email.svg");
+    background-size: contain;   /* 이미지가 잘리지 않게 */
+    background-position: center;
+    width: 28px;
+    height: 28px;
+    background-repeat: no-repeat;
+
+}

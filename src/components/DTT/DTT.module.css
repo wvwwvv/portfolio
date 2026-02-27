@@ -2,7 +2,6 @@
     background-color: black;
     min-height: 100vh;
     padding: 50px;
-    border: 1px solid white;
 
     display: flex;
     flex-direction: column;
@@ -11,7 +10,6 @@
 }
 
 .title {
-    border: 1px solid white;
     text-align: center;
     color : #FFCF0F;
     font-size: 36px;
@@ -26,7 +24,15 @@
 }
 
 .test_button {
+    width: 160px;
+    height: 60px;
     font-size: 24px;
-    width: fit-content;
+    font-weight: bold;
+    border-radius: 32px;
+    background-color: #FFCF0F;
+    color: black;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

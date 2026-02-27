@@ -21,7 +21,7 @@ const Header = () => {
             {isHome ? (
                 <>
                     <nav className={styles.logo}>
-                        <ScrollLink to="overview" spy={true} smooth={true} offset={-70} duration={500}>강상민의 포트폴리오</ScrollLink>
+                        <ScrollLink to="overview" spy={true} smooth={true} offset={-70} duration={500}>KSM's Portfolio</ScrollLink>
                     </nav>
                     <nav className={styles.nav}>
                         {/* offset : 헤더 크기만큼 미리 위쪽에서 빼놓기 */}
