@@ -70,3 +70,51 @@
     font-style: italic;
     color: #999;
 }
+
+img[alt*="blog0-1"] {
+    width: 80%;
+}
+
+img[alt*="blog0-2"] {
+    width: 200px;
+    height:350px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+}
+
+img[alt*="blog0-2-2"] {
+    width: 300px;
+    height: 350px;
+}
+
+:global(img[alt*="blog0-2"]),
+:global(img[alt*="blog0-2-2"]) {
+    display: inline-block;  /* 가로로 나열 */
+    vertical-align: top;    /* 두 이미지의 윗부분을 맞춤 */
+    object-fit: cover;      /* 비율 유지 */
+}
+
+img[alt*="blog0-3"] {
+    width: 300px;
+    height:250px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+}
+
+img[alt*="blog0-4"] {
+    width: 400px;
+    height: 250px;
+}
+
+:global(img[alt*="blog0-3"]),
+:global(img[alt*="blog0-4"]) {
+    display: inline-block;
+    vertical-align: top;
+    object-fit: cover;
+}
+
+img[alt*="blog3"] {
+    width: 75%;
+}

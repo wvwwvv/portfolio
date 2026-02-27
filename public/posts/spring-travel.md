@@ -1,4 +1,6 @@
-![blog image](https://fqykroccjxsazrolnlwb.supabase.co/storage/v1/object/public/me/blog1.jpg)
+![img](https://fqykroccjxsazrolnlwb.supabase.co/storage/v1/object/public/me/blog1.jpg)
+
+# [Vlog] 개강 전, 마지막 발악(?) 봄맞이 여행 기록 🌸
 
 벌써 2월 말이라니 말도 안 돼... 🫠 개강하기 전에 기분 전환도 할 겸, 마음 맞는 동기들이랑 짧게 **봄맞이 여행**을 다녀왔어요. 날씨가 제법 풀려서 이제 진짜 봄이 오는구나 싶더라고요!
 

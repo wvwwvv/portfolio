@@ -5,6 +5,49 @@
     border: 1px solid white;
 }
 
+.all_contents {
+
+    width: 85%;
+    margin: auto;
+}
+
+.title {
+    text-align: center;
+    color : #FFCF0F;
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 40px;
+}
+
+.title_head{
+    display: flex;
+    align-items: center;
+    margin: auto auto 60px auto;
+    width: fit-content;
+}
+
+.back_button {
+    background-image: url("../../../public/images/leftArrow.svg");
+    width: 50px;
+    height: 50px;
+}
+
+.back_button_text {
+    width: 120px;
+    height: 50px;
+    margin: 10px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFCF0F ;
+    color: black;
+    border-radius: 20px;
+
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
 .images_container {
     display: flex;
     gap: 30px;
@@ -12,6 +55,18 @@
 }
 
 .detail_image {
-    width: 70%;
-    height: 70%;
+    width: 80%;
+    height: 80%;
+    margin: 0 auto 30px auto;
+}
+
+.content_title {
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 14px;
+}
+
+.content_text {
+    font-size: 20px;
+    margin-bottom: 62px;
 }

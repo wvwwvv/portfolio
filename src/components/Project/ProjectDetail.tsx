@@ -1,18 +1,18 @@
 import {useNavigate, useParams} from "react-router-dom";
-import { useQuery } from "@tanstack/react-query";
-import { supabase } from "../../api/supabase.ts";
-import type { Projects } from "../../types/Projects.ts";
+import {useQuery} from "@tanstack/react-query";
+import {supabase} from "../../api/supabase.ts";
+import type {Projects} from "../../types/Projects.ts";
 import styles from './ProjectDetail.module.css'
 
 
 const ProjectDetail = () => {
-    const { id } = useParams<{ id: string }>(); // url 에서 id 추출
+    const {id} = useParams<{ id: string }>(); // url 에서 id 추출
     const navigate = useNavigate();
 
-    const { data: project, isLoading } = useQuery<Projects>({
+    const {data: project, isLoading} = useQuery<Projects>({
         queryKey: ['project', id], /* url 에서 추출한 id 로 쿼리 생성 */
         queryFn: async () => {
-            const { data, error } = await supabase
+            const {data, error} = await supabase
                 .from('project')
                 .select('*')
                 .eq('id', id)
@@ -31,22 +31,40 @@ const ProjectDetail = () => {
 
     return (
         <section className={styles.section}>
-            <h1>{project.title}</h1>
-            <p><strong>기간:</strong> {project.period}</p>
-            <p><strong>기술 스택:</strong> {project.skill}</p>
-            <p>{project.description}</p>
 
-            {/* 상세 이미지들 출력 */}
-            <div className={styles.images_container}>
-                {project.detail_images?.map((url, idx) => (
-                    <img src={url} alt={`detail-${idx}`} className={styles.detail_image} />
-                ))}
+            {/* 뒤로가기와 제목 */}
+            <div className={styles.title_head}>
+                <div onClick={() => handleClick('project')} className={styles.back_button}></div>
+                <p className={styles.title}> {project?.title}</p>
             </div>
 
-            <button onClick={() => handleClick('project')}>뒤로가기</button>
+            <div className={styles.all_contents}>
+                <p className={styles.content_title}>프로젝트 소개</p>
+                <p className={styles.content_text}>{project.description}</p>
+                <p className={styles.content_title}>프로젝트 기간</p>
+                <p className={styles.content_text}>{project.period}</p>
+                <p className={styles.content_title}>맡은 역할</p>
+                <p className={styles.content_text}>{project.role}</p>
+                <p className={styles.content_title}>사용 기술</p>
+                <p className={styles.content_text}>{project.skill}</p>
+
+
+                {/* 상세 이미지들 출력 */}
+                <div className={styles.images_container}>
+                    {project.detail_images?.map((url, idx) => (
+                        <img src={url} alt={`detail-${idx}`} className={styles.detail_image}/>
+                    ))}
+                </div>
+
+                <div
+                    onClick={() => handleClick('project')}
+                    className={styles.back_button_text}
+                >뒤로가기</div>
+            </div>
         </section>
     );
 };
+
 
 export default ProjectDetail;
 
