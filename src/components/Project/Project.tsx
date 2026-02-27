@@ -14,6 +14,7 @@ const Project = () => {
             const {data, error} = await supabase
                 .from('project')
                 .select('*')
+                .order('id', {ascending:true})
             if (error) throw error;
             return data;
         }

@@ -1,0 +1,72 @@
+.section {
+    background-color: black;
+    min-height: 100vh;
+    padding: 70px 50px 50px 50px;
+}
+
+.title_head{
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+}
+
+.blog_title {
+    font-size: 32px;
+    color: lightpink;
+}
+
+.back_button {
+    background-image: url("../../../public/images/leftArrow.svg");
+    width: 50px;
+    height: 50px;
+}
+
+.blog_date {
+    margin: 0 90px 45px auto;
+    width: fit-content;
+    font-size: 20px;
+}
+
+
+.blog_contents {
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+.blog_contents img {
+    display: block;
+    width: 95%;
+    margin: 0 auto 20px auto;
+}
+
+.blog_contents h1 {
+    font-size: 2rem;
+    font-family: "Bauhaus 93";
+    margin-bottom: 20px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+    color: lightpink;
+
+}
+
+.blog_contents h3 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: lightpink; /* 봄 느낌 살짝? */
+}
+
+.blog_contents p {
+    margin-bottom: 16px;
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+/* 인용문 스타일 */
+.blog_contents blockquote {
+    border-left: 4px solid #ffd700;
+    padding-left: 16px;
+    font-style: italic;
+    color: #999;
+}

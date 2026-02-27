@@ -1,15 +1,14 @@
 .card {
-    border: 1px solid red;
     background-color: white;
     flex-shrink: 0; /*찌그러지지 않게*/
-    width: 380px;
+    width: 330px;
     min-height: 260px;
-
+    border-radius: 18px;
+    overflow: hidden; /*삐져나온거 자르기*/
 }
 
 
 .thumbnail {
-    border: 1px solid orange;
     width: 100%;
     height: 150px;
 
@@ -21,7 +20,6 @@
 }
 
 .content {
-    border: 1px solid white;
     margin: 5px;
     text-align: center;
 

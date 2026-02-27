@@ -2,11 +2,11 @@
     background-color: black;
     min-height: 100vh;
     padding: 50px;
-    border: 1px solid white;
+    border: 1px solid red;
+
 }
 
 .title {
-    border: 1px solid white;
     text-align: center;
     color : #FFCF0F;
     font-size: 36px;
@@ -16,8 +16,8 @@
 }
 
 .blog_container {
-    border: 1px solid white;
-
+    width: 80%;
+    margin: 0 auto;
     display: flex;
     overflow-x: auto;
     gap: 30px;
@@ -26,5 +26,24 @@
     /*스크롤 바 감추기*/
     -ms-overflow-style: none;
     scrollbar-width: none;
+}
+
+.wrapper {
+    display: flex;
+
+}
+
+.left_arrow {
+    background-image: url("../../../public/images/leftArrow.svg");
+    width: 50px;
+    height: 50px;
+    margin: auto 0 auto auto;
+}
+
+.right_arrow {
+    background-image: url("../../../public/images/rightArrow.svg");
+    width: 50px;
+    height: 50px;
+    margin: auto auto auto 0;
 
 }
