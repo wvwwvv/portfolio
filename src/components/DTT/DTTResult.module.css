@@ -1,0 +1,14 @@
+.section {
+    background-color: black;
+    min-height: 100vh;
+    padding: 70px 50px 50px 50px;
+    border: 1px solid white;
+}
+
+.title {
+    text-align: center;
+    color : #FFCF0F;
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 40px;
+}
