@@ -1,14 +1,85 @@
 .section {
-    background-color: black;
-    min-height: 100vh;
-    padding: 70px 50px 50px 50px;
-    border: 1px solid white;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    color: white;
+    background-color: #000;
+    text-align: center;
 }
 
-.title {
+.header {
     text-align: center;
     color : #FFCF0F;
-    font-size: 40px;
+    font-size: 36px;
     font-weight: bold;
-    margin-left: 40px;
+    margin-top: 30px;
+    margin-bottom: 68px;
+}
+
+.subtitle1 {
+    font-size: 14px;
+    color : #FFCF0F;
+    margin-bottom: 14px;
+}
+
+.subtitle2 {
+    font-size : 26px;
+    margin-bottom: 80px;
+}
+
+/* 질문 + 선택 영역 */
+.questionItem {
+    margin-bottom: 60px;
+}
+
+.questionText {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+/* 그렇지 않다, 그렇다 */
+.label {
+    font-size: 12px;
+    color: #888;
+}
+
+/* 동그라미 기본 스타일 */
+.circle {
+    border: 2px solid #ffcc00;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+
+/* 질문 답 클릭했을 때 */
+.circle.active {
+    background-color: #ffcc00;
+}
+
+/* 양 끝으로 갈수록 커지게 크기 설정 */
+.size0, .size5 { width: 45px; height: 45px; }
+.size1, .size4 { width: 35px; height: 35px; }
+.size2, .size3 { width: 25px; height: 25px; }
+
+.submitButton {
+    margin-top: 40px;
+    padding: 15px 40px;
+    background-color: #ffcc00;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.submitButton:hover {
+    background-color: #e6b800; /* 톤 다운 */
 }
