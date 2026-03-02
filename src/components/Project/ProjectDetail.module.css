@@ -69,3 +69,165 @@
     font-size: 16px;
     margin-bottom: 62px;
 }
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+    .section {
+        margin-top: 20px;
+        padding: 50px 20px;
+        min-height: auto;
+    }
+
+    .all_contents {
+        width: 95%;
+    }
+
+    .title {
+        font-size: 32px;
+        margin-left: 10px;
+    }
+
+    .title_head {
+        margin-bottom: 40px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .back_button {
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+    }
+
+    .back_button_text {
+        width: 100px;
+        height: 40px;
+        font-size: 14px;
+        border-radius: 15px;
+    }
+
+    .images_container {
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .detail_image {
+        width: 90%;
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    .content_title {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .content_text {
+        font-size: 15px;
+        margin-bottom: 40px;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        margin-top: 24px;
+        padding: 40px 15px;
+    }
+
+    .all_contents {
+        width: 100%;
+    }
+
+    .title {
+        font-size: 26px;
+        margin-left: 5px;
+    }
+
+    .title_head {
+        margin-bottom: 30px;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .back_button {
+        width: 30px;
+        height: 30px;
+        flex-shrink: 0;
+    }
+
+    .back_button_text {
+        width: 90px;
+        height: 30px;
+        font-size: 13px;
+        border-radius: 12px;
+        margin: 0;
+    }
+
+    .images_container {
+        gap: 8px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .detail_image {
+        width: 95%;
+        margin-bottom: 12px;
+    }
+
+    .content_title {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .content_text {
+        font-size: 14px;
+        margin-bottom: 30px;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 414px) {
+    .section {
+        margin-top: 20px;
+        padding: 30px 10px;
+    }
+
+    .title {
+        font-size: 22px;
+        margin-left: 3px;
+    }
+
+    .title_head {
+        margin-bottom: 25px;
+        gap: 5px;
+    }
+
+    .back_button {
+        width: 30px;
+        height: 30px;
+    }
+
+    .back_button_text {
+        width: 80px;
+        height: 30px;
+        font-size: 12px;
+        border-radius: 10px;
+    }
+
+    .detail_image {
+        width: 98%;
+        margin-bottom: 10px;
+    }
+
+    .content_title {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    .content_text {
+        font-size: 13px;
+        margin-bottom: 25px;
+        line-height: 1.4;
+    }
+}

@@ -16,7 +16,6 @@ const BlogCard = ({blog} : BlogCardProps) => {
             <div className={styles.content}>
                 <p className={styles.blog_title}>{blog.title}</p>
                 <p className={styles.description}>{blog.date}</p>
-                <p>slug : {blog.slug}</p>
             </div>
         </div>
     )

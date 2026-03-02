@@ -71,9 +71,10 @@
     }
 
     .left_arrow, .right_arrow {
-        width: 40px;
-        height: 40px;
+        width: 32px;
+        height: 32px;
         margin: 10px auto;
+        flex-shrink: 0;
     }
 }
 
@@ -81,6 +82,7 @@
     .section {
         padding: 15px;
         padding-bottom: 30px;
+        min-height: 60vh;
     }
 
     .title {
@@ -95,9 +97,10 @@
     }
 
     .left_arrow, .right_arrow {
-        width: 35px;
-        height: 35px;
+        width: 28px;
+        height: 28px;
         margin: 8px auto;
+        flex-shrink: 0;
     }
 }
 
@@ -118,8 +121,9 @@
     }
 
     .left_arrow, .right_arrow {
-        width: 30px;
-        height: 30px;
+        width: 24px;
+        height: 24px;
         margin: 5px auto;
+        flex-shrink: 0;
     }
 }
