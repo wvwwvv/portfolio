@@ -2,12 +2,14 @@
     background-color: black;
     min-height: 100vh;
     padding: 50px;
+    padding-bottom: 120px;
 
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
     gap:40px;
+    border: 1px solid red;
 }
 
 .title {
@@ -45,4 +47,99 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+    .section {
+        padding: 20px;
+        padding-bottom: 150px;
+        min-height: auto;
+        margin-bottom: 100px;
+        gap: 30px;
+    }
+
+    .title {
+        font-size: 28px;
+        margin-top: 20px;
+        margin-bottom: 60px;
+    }
+
+    .path_icon {
+        width: 22px;
+        height: 120px;
+        margin-bottom: 10px;
+    }
+
+    .explain {
+        font-size: 28px;
+        padding: 0 10px;
+    }
+
+    .test_button {
+        width: 140px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 15px;
+        padding-bottom: 120px;
+        gap: 25px;
+        margin-bottom: 100px;
+    }
+
+    .title {
+        font-size: 24px;
+        margin-bottom: 40px;
+    }
+
+    .path_icon {
+        width: 20px;
+        height: 100px;
+        margin-bottom: 8px;
+    }
+
+    .explain {
+        font-size: 24px;
+        padding: 0 5px;
+    }
+
+    .test_button {
+        width: 120px;
+        height: 45px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 414px) {
+    .section {
+        padding: 10px;
+        padding-bottom: 100px;
+        gap: 20px;
+    }
+
+    .title {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    .path_icon {
+        width: 18px;
+        height: 80px;
+        margin-bottom: 6px;
+    }
+
+    .explain {
+        font-size: 20px;
+        padding: 0 3px;
+    }
+
+    .test_button {
+        width: 100px;
+        height: 40px;
+        font-size: 16px;
+    }
 }
