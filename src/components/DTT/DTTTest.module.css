@@ -83,3 +83,158 @@
 .submitButton:hover {
     background-color: #e6b800; /* 톤 다운 */
 }
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+    .section {
+        padding: 30px 15px;
+        max-width: 90%;
+    }
+
+    .header {
+        font-size: 28px;
+        margin-bottom: 40px;
+        margin-top: 20px;
+    }
+
+    .subtitle1 {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .subtitle2 {
+        font-size: 22px;
+        margin-bottom: 50px;
+    }
+
+    .questionItem {
+        margin-bottom: 40px;
+    }
+
+    .questionText {
+        font-size: 18px;
+        margin-bottom: 20px;
+        padding: 0 10px;
+    }
+
+    .options {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .label {
+        font-size: 11px;
+    }
+
+    .size0, .size5 { width: 38px; height: 38px; }
+    .size1, .size4 { width: 30px; height: 30px; }
+    .size2, .size3 { width: 22px; height: 22px; }
+
+    .submitButton {
+        padding: 12px 35px;
+        font-size: 16px;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 20px 10px;
+        max-width: 95%;
+    }
+
+    .header {
+        font-size: 24px;
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }
+
+    .subtitle1 {
+        font-size: 11px;
+        margin-bottom: 8px;
+    }
+
+    .subtitle2 {
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+
+    .questionItem {
+        margin-bottom: 30px;
+    }
+
+    .questionText {
+        font-size: 16px;
+        margin-bottom: 15px;
+        line-height: 1.4;
+    }
+
+    .options {
+        gap: 12px;
+    }
+
+    .label {
+        font-size: 10px;
+    }
+
+    .size0, .size5 { width: 32px; height: 32px; }
+    .size1, .size4 { width: 26px; height: 26px; }
+    .size2, .size3 { width: 20px; height: 20px; }
+
+    .submitButton {
+        padding: 10px 30px;
+        font-size: 14px;
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 414px) {
+    .section {
+        padding: 15px 8px;
+        max-width: 98%;
+    }
+
+    .header {
+        font-size: 20px;
+        margin-bottom: 25px;
+        margin-top: 10px;
+    }
+
+    .subtitle1 {
+        font-size: 10px;
+        margin-bottom: 6px;
+    }
+
+    .subtitle2 {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .questionItem {
+        margin-bottom: 25px;
+    }
+
+    .questionText {
+        font-size: 14px;
+        margin-bottom: 12px;
+        line-height: 1.3;
+    }
+
+    .options {
+        gap: 10px;
+    }
+
+    .label {
+        font-size: 9px;
+    }
+
+    .size0, .size5 { width: 28px; height: 28px; }
+    .size1, .size4 { width: 23px; height: 23px; }
+    .size2, .size3 { width: 18px; height: 18px; }
+
+    .submitButton {
+        padding: 8px 25px;
+        font-size: 13px;
+        margin-top: 20px;
+    }
+}

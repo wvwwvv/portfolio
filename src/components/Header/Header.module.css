@@ -25,7 +25,9 @@
 }
 
 /* 마우스 올렸을 때 포인터로 변경 */
-.nav a {
+.nav a,
+.nav span,
+.logo span {
     cursor: pointer;
     text-decoration: none;
     color: white;
@@ -33,12 +35,9 @@
 
 /* a 는 ScrollLink 에 내장된 것 */
 .nav a:hover,
-.logo:hover{
-    color: #FFCF0F;
-}
-
-
-span:hover {
+.nav span:hover,
+.logo:hover,
+.logo span:hover {
     color: #FFCF0F;
 }
 
@@ -48,3 +47,66 @@ span:hover {
 .nav :global(.active) {
     color: #FFCF0F;
 }
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+    .header {
+        padding: 0 20px;
+        height: 60px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .nav {
+        gap: 20px;
+    }
+
+    .nav a,
+    .nav span {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 0 15px;
+        height: 55px;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .nav {
+        gap: 15px;
+    }
+
+    .nav a,
+    .nav span {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 414px) {
+    .header {
+        padding: 0 10px;
+        height: 50px;
+    }
+
+    .logo {
+        font-size: 14px;
+    }
+
+    .nav {
+        gap: 10px;
+    }
+
+    .nav a,
+    .nav span {
+        font-size: 10px;
+        padding: 5px;
+    }
+}
+

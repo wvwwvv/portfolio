@@ -21,7 +21,7 @@ const Home = () => {
                 scroller.scrollTo(target, {
                     duration: 500,
                     smooth: true,
-                    offset: -70
+                    offset: -80
                 });
             }, 100);
 
@@ -31,13 +31,13 @@ const Home = () => {
 
     return (
         <div style={{paddingTop : 70}}>
-            <Overview/>
-            <About/>
-            <Skill/>
-            <Project/>
-            <Blog/>
-            <DTT/>
-            <Contact/>
+            <div id="overview"><Overview/></div>
+            <div id="about"><About/></div>
+            <div id="skill"><Skill/></div>
+            <div id="project"><Project/></div>
+            <div id="blog"><Blog/></div>
+            <div id="dtt"><DTT/></div>
+            <div id="contact"><Contact/></div>
         </div>
     )
 }

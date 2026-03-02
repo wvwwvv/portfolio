@@ -45,3 +45,81 @@
     margin: auto auto auto 0;
 
 }
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+    .section {
+        padding: 20px;
+        min-height: auto;
+        padding-bottom: 40px;
+    }
+
+    .title {
+        font-size: 28px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    .blog_container {
+        width: 95%;
+        gap: 20px;
+        padding: 15px 0;
+    }
+
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .left_arrow, .right_arrow {
+        width: 40px;
+        height: 40px;
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 15px;
+        padding-bottom: 30px;
+    }
+
+    .title {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .blog_container {
+        width: 100%;
+        gap: 15px;
+        padding: 10px 0;
+    }
+
+    .left_arrow, .right_arrow {
+        width: 35px;
+        height: 35px;
+        margin: 8px auto;
+    }
+}
+
+@media (max-width: 414px) {
+    .section {
+        padding: 10px;
+        padding-bottom: 20px;
+    }
+
+    .title {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .blog_container {
+        gap: 10px;
+        padding: 8px 0;
+    }
+
+    .left_arrow, .right_arrow {
+        width: 30px;
+        height: 30px;
+        margin: 5px auto;
+    }
+}

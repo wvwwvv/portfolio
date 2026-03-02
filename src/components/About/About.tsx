@@ -41,45 +41,43 @@ const About = () => {
 
             <div className={styles.content}>
                 <img
-                    src={profile?.profile_url} className={styles.profile_image}
+                    src={profile?.profile_url}
+                    alt={`${profile?.name || '프로필'} 사진`}
+                    className={styles.profile_image}
                 />
 
                 <div className={styles.profile_info}>
-                    <p style={{fontSize: 48, marginBottom: 20, fontWeight: 'bold'}}>{profile?.name}</p>
+                    <p style={{fontSize: 42, marginBottom: 20, fontWeight: 'bold'}}>{profile?.name}</p>
                     <p style={{fontSize: 20, marginBottom: 20, fontWeight: 'bold'}}>{profile?.dev_type}</p>
                     <p style={{fontSize: 16, marginBottom: 70}}>{profile?.comment}</p>
 
-                    {/* 프로필 - 소개 아래의 experience 한 줄 */}
-                    <div className={styles.experience}>
-                        <div>
-                            <p style={{fontWeight: 'bold', fontSize: 24, marginBottom: 20}}>Activities</p>
-
+                    {/* 프로필 - 소개 아래의 experience 2x2 그리드 */}
+                    <div className={styles.experienceGrid}>
+                        <div className={styles.experienceItem}>
+                            <p style={{fontWeight: 'bold', fontSize: 24, marginBottom: 20}}>📖 Activities</p>
                             {experience
-                                ?.filter((item) => item.category === 'Activities') // 카테고리 Activities 만
-                                .map((item) => (
-                                    <p style={{fontSize: 16, marginBottom: 10}}>{item.content}</p>
+                                ?.filter((item) => item.category === 'Activities')
+                                .map((item, index) => (
+                                    <p key={index} style={{fontSize: 16, marginBottom: 10}}>{item.content}</p>
                                 ))}
                         </div>
-                        <div style={{marginLeft: 132}}>
-                            <p style={{fontWeight: 'bold', fontSize: 24, marginBottom: 20}}>Certifications</p>
 
+                        <div className={styles.experienceItem}>
+                            <p style={{fontWeight: 'bold', fontSize: 24, marginBottom: 20}}>📚 Papers</p>
                             {experience
-                                ?.filter((item) => item.category === 'Certifications') // 카테고리 Certifications 만
-                                .map((item) => (
-                                    <p style={{fontSize: 16, marginBottom: 10}}>{item.content}</p>
+                                ?.filter((item) => item.category === 'Papers')
+                                .map((item, index) => (
+                                    <p key={index} style={{fontSize: 16, marginBottom: 10}}>{item.content}</p>
                                 ))}
                         </div>
-                    </div>
 
-                    <div className={styles.experience}>
-                        <div>
-                            <p style={{fontWeight: 'bold', fontSize: 24, marginBottom: 20}}>Location</p>
-
+                        <div className={styles.experienceItem}>
+                            <p style={{fontWeight: 'bold', fontSize: 24, marginBottom: 20}}>🌍 Location</p>
                             <p style={{fontSize: 16, marginBottom: 10}}>{profile?.location}</p>
-
                         </div>
-                        <div style={{marginLeft: 248}}>
-                            <p style={{fontWeight: 'bold', fontSize: 24, marginBottom: 20}}>Birth</p>
+
+                        <div className={styles.experienceItem}>
+                            <p style={{fontWeight: 'bold', fontSize: 24, marginBottom: 20}}>🕧 Birth</p>
 
                             <p style={{fontSize: 16, marginBottom: 10}}>{profile?.birth_date}</p>
 
