@@ -11,6 +11,8 @@ const Contact = () => {
 
             <p className={styles.explain}>나의 개발자 유형은 무엇일까?</p>
 
+            <div className={styles.path_icon}></div>
+
             <div
                 onClick={() => navigate(`/dtt/login`)}
                 style={{cursor: 'pointer'}}

@@ -25,8 +25,18 @@ const Contact = () => {
         <section id="contact" className={styles.section}>
             <h1 className={styles.title}>Contact</h1>
 
+            <div className={styles.comment}>
+                <p>함께 더 큰 가치를 만들어갈 파트너를 구합니다.</p>
+                <p>협업 및 문의는 언제든지 편하게 연락 주시기 바랍니다.</p>
+            </div>
+
             <div className={styles.contact_footer}>
                 <div className={styles.icons}>
+                    <a
+                        className={styles.phone_icon}
+                        href={`tel:${contact?.phone}`}
+                        title="To Instagram"
+                    ></a>
                     <a
                         className={styles.instagram_icon}
                         href={contact?.instagram_url}

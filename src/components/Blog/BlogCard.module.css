@@ -5,6 +5,13 @@
     min-height: 260px;
     border-radius: 18px;
     overflow: hidden; /*삐져나온거 자르기*/
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.05);
 }
 
 

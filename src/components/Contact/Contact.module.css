@@ -17,6 +17,13 @@
 
 }
 
+.comment {
+    font-size: 40px;
+    font-family: sans-serif;
+    text-align: center;
+
+}
+
 .contact_footer {
     background-color : black;
     box-shadow:
@@ -39,6 +46,15 @@
     color: grey;
     margin: 24px auto 0 auto;
     width: fit-content;
+}
+
+.phone_icon {
+    background-image: url("../../../public/images/phone.svg");
+    background-size: contain;   /* 이미지가 잘리지 않게 */
+    background-position: center;
+    width: 28px;
+    height: 28px;
+    background-repeat: no-repeat;
 }
 
 .instagram_icon {

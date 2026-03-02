@@ -27,6 +27,13 @@
     display: flex;
     width: fit-content;
     border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 변화 부드럽게 */
+
+}
+
+
+.content_even:hover, .content_odd:hover {
+    transform: scale(1.05); /* 5% 크게 */
 }
 
 .content_even {
@@ -65,4 +72,32 @@
     border-radius: 10px;
     /*    width: 240px;
         height: 240px; image 마다 적당한 크기 다를 수 있으니 tsx 에서 조절 */
+}
+
+
+
+/* 모바일용 미디어 쿼리 (768px 이하) */
+@media (max-width: 768px) {
+    .content_even, .content_odd {
+        flex-direction: column !important; /* 무조건 세로로 쌓기 */
+        width: 100%;
+        margin: 20px 0;
+        align-items: center;
+    }
+
+    .texts {
+        margin: 20px 0;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .description {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .thumbnail {
+        width: 100% !important; /* 이미지가 화면 너비를 채우도록 */
+        height: auto !important;
+    }
 }

@@ -36,7 +36,7 @@ const Header = () => {
             ) : (
                 <>
                     <nav className={styles.logo}>
-                        <span onClick={() =>handleClick('overview')}>강상민의 포트폴리오</span>
+                        <span onClick={() =>handleClick('overview')}>KSM's Portfolio</span>
                     </nav>
                     <nav className={styles.nav}>
                         <span onClick={() => handleClick('about')}>About</span>
