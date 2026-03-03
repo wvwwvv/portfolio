@@ -338,3 +338,101 @@
     }
 }
 
+@media (max-width: 436px) {
+    .section {
+        padding: 50px 20px;
+        border: none;
+    }
+
+    .subtitle1 {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .subtitle2 {
+        font-size: 18px;
+        margin-bottom: 32px;
+    }
+
+
+
+    .explain_container {
+        margin: 24px auto 24px 24px;
+    }
+
+    .explain_header {
+        font-size: 18px;
+        margin-bottom: 18px;
+        text-align: center;
+    }
+
+    .explain_text {
+        font-size: 10px;
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .dev_button {
+        margin-top: 32px;
+        padding: 10px 24px;
+        font-size: 12px;
+    }
+
+    .visitors_table {
+        width: 95%;
+        margin-top: 54px;
+    }
+
+    .visitors_table_header {
+        padding: 6px 0;
+        margin-bottom: 12px;
+    }
+
+    .visitors_table_number_header,
+    .visitors_table_nickname_header,
+    .visitors_table_date_header {
+        font-size: 14px;
+    }
+
+    .visitors_table_number,
+    .visitors_table_nickname {
+        font-size: 12px;
+    }
+
+    .visitors_table_date {
+        font-size: 10px;
+    }
+
+    .visitor_info {
+        padding: 6px 0;
+    }
+
+    .visitors_table_delete_button {
+        padding: 8px;
+    }
+
+    .modal_container {
+        max-width: 320px;
+        width: 85%;
+        padding: 20px;
+    }
+
+    .modal_header {
+        margin-bottom: 15px;
+    }
+
+    .modal_input {
+        font-size: 14px;
+        padding: 8px 0;
+    }
+
+    .modal_cancel_button,
+    .modal_delete_button {
+        padding: 10px 20px;
+        font-size: 12px;
+        min-width: 80px;
+    }
+
+
+}
+

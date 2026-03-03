@@ -71,6 +71,7 @@
     }
 }
 
+/* 갤럭시 25 : 약 376 px */
 @media (max-width: 436px) {
     .header {
         padding: 0 20px;
@@ -78,7 +79,7 @@
     }
 
     .logo {
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .nav {

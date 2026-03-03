@@ -40,5 +40,11 @@
     }
 }
 
+@media (max-width: 436px) {
+    .title {
+        font-size: 40px;
+    }
+}
+
 
 
