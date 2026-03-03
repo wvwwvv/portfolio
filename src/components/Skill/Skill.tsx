@@ -26,6 +26,7 @@ const Skill = () => {
 
             <div className={styles.all_contents}>
                 <div className={styles.all_skills}>
+                    {/* skill 한 줄 */}
                     <div className={styles.skills_row}>
                         <p className={styles.skill_category}>Backend</p>
                         <div className={styles.skills_container}>

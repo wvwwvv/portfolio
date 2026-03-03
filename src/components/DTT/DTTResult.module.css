@@ -249,9 +249,92 @@
         border: none;
     }
 
-    .title {
-        font-size: 32px;
-        margin-left: 0;
+    .subtitle1 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .subtitle2 {
+        font-size: 22px;
+        margin-bottom: 40px;
+    }
+
+    .explain {
+        width: 95%;
+        border-radius: 16px;
+    }
+
+    .explain_container {
+        margin: 30px auto 30px 30px;
+    }
+
+    .explain_header {
+        font-size: 24px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .explain_text {
+        font-size: 13px;
+        max-width: 85%;
+        text-align: center;
+    }
+
+    .dev_button {
+        margin-top: 40px;
+        padding: 10px 24px;
+        font-size: 14px;
+    }
+
+    .visitors_table {
+        width: 95%;
+        margin-top: 60px;
+    }
+
+    .visitors_table_header {
+        padding: 8px 0;
+        margin-bottom: 15px;
+    }
+
+    .visitors_table_number_header,
+    .visitors_table_nickname_header,
+    .visitors_table_date_header {
+        font-size: 18px;
+    }
+
+    .visitors_table_number,
+    .visitors_table_nickname {
+        font-size: 16px;
+    }
+
+    .visitors_table_date {
+        font-size: 14px;
+    }
+
+    .visitor_info {
+        padding: 8px 0;
+    }
+
+    .modal_container {
+        max-width: 320px;
+        width: 85%;
+        padding: 20px;
+    }
+
+    .modal_header {
+        margin-bottom: 15px;
+    }
+
+    .modal_input {
+        font-size: 14px;
+        padding: 8px 0;
+    }
+
+    .modal_cancel_button,
+    .modal_delete_button {
+        padding: 10px 20px;
+        font-size: 12px;
+        min-width: 80px;
     }
 }
 

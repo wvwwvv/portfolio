@@ -80,12 +80,15 @@ const DTTResult = () => {
         setPassword('');
     };
 
+    /* 모달 닫기 - 상태 변수 초기화 */
     const handleModalClose = () => {
         setIsModalOpen(false);
         setSelectedUser(null);
         setPassword('');
     };
 
+
+    /* 삭제 눌렀을 때 호출 */
     const handleConfirmDelete = async () => {
         if (!selectedUser || !password) {
             alert("비밀번호를 입력해주세요.")
@@ -99,6 +102,7 @@ const DTTResult = () => {
                 return;
             }
 
+            /* 방명록에서 휴지통 누른 위치의 유저를 상태변수에 넣고, 해당 닉네임으로 db에서 삭제 */
             const {error} = await supabase
                 .from('visitor')
                 .delete()
@@ -108,7 +112,7 @@ const DTTResult = () => {
 
             alert("삭제가 완료되었습니다.");
 
-            // 방문자 새로고침
+            // 방문자 테이블 새로고침
             queryClient.invalidateQueries({ queryKey: ['visitors'] });
             handleModalClose();
         }catch (err) {
@@ -144,9 +148,11 @@ const DTTResult = () => {
                 </div>
             </div>
 
+            {/* 누르면 contact 페이지로 이동 */}
             <button className={styles.dev_button} onClick={() => handleDevButton('contact')}>강상민과 개발하러 가기</button>
 
             <div className={styles.visitors_table}>
+                {/* visitors 테이블 헤더 */}
                 <div className={styles.visitors_table_header}>
                     <div className={styles.visitors_table_number_header}>번호</div>
                     <div className={styles.visitors_table_nickname_header}>닉네임</div>
@@ -161,9 +167,11 @@ const DTTResult = () => {
                                 <div className={styles.visitors_table_number}>{idx+1}</div>
                                 <div className={styles.visitors_table_nickname}>{item.nickname}</div>
                                 <div className={styles.visitors_table_date}>
-                                    {/* YYYY-MM-DD 형식 */}
+                                    {/* YYYY-MM-DD 형식으로 변환 */}
                                     {new Date(item.created_at).toISOString().split('T')[0]}
                                 </div>
+
+                                {/* 삭제 버튼 */}
                                 <div
                                     className={styles.visitors_table_delete_button}
                                     onClick={() => handleDeleteUserInfo(item)}
@@ -206,7 +214,7 @@ const DTTResult = () => {
                             <button
                                 className={styles.modal_delete_button}
                                 onClick={handleConfirmDelete}
-                                /* 삭제중도 아니고 비밀번호도 입력 안하면 비활성화 */
+                                /* 비밀번호 입력 안하면 비활성화 */
                                 disabled={!password}
                             >
                                 삭제
