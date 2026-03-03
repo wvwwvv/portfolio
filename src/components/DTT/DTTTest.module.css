@@ -144,7 +144,7 @@
 @media (max-width: 436px) {
     .section {
         padding: 50px 15px 30px 15px;
-        max-width: 90%;
+        max-width: 95%;
     }
 
     .header {
@@ -175,17 +175,17 @@
     }
 
     .options {
-        gap: 12px;
+        gap: 10px;
         flex-wrap: wrap;
     }
 
     .label {
-        font-size: 8px;
+        font-size: 7px;
     }
 
-    .size0, .size5 { width: 34px; height: 34px; }
-    .size1, .size4 { width: 26px; height: 26px; }
-    .size2, .size3 { width: 18px; height: 18px; }
+    .size0, .size5 { width: 22px; height: 22px; }
+    .size1, .size4 { width: 18px; height: 18px; }
+    .size2, .size3 { width: 14px; height: 14px; }
 
     .submitButton {
         padding: 10px 30px;

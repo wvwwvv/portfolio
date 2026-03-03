@@ -129,3 +129,46 @@
     }
 }
 
+@media (max-width: 436px) {
+    .section {
+        padding: 50px 20px;
+    }
+
+    .title {
+        font-size: 18px;
+        margin-bottom: 18px;
+    }
+
+    .title_description {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .description {
+        font-size: 12px;
+        max-width: 90%;
+    }
+
+    .header {
+        margin-bottom: 28px;
+    }
+
+    .input_group {
+        gap: 12px;
+        max-width: 80%;
+        margin-bottom: 30px;
+        justify-content: center;
+    }
+
+    .input {
+        padding: 12px 20px;
+        max-width: 140px;
+        font-size: 14px;
+    }
+
+    .next_button {
+        padding: 10px 28px;
+        font-size: 14px;
+    }
+}
+
