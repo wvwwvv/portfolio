@@ -22,6 +22,7 @@ const ProjectDetail = () => {
         }
     });
 
+    /* 사용할 때에 to 에 project 값 넣어서 사용 */
     const handleClick = (to: String) => {
         navigate('/', {state: {scrollTo: to}});
     };

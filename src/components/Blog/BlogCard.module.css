@@ -1,10 +1,10 @@
 .card {
     background-color: white;
-    flex-shrink: 0; /*찌그러지지 않게*/
+    flex-shrink: 0; /* 찌그러지지 않게 */
     width: 330px;
     min-height: 260px;
     border-radius: 18px;
-    overflow: hidden; /*삐져나온거 자르기*/
+    overflow: hidden; /* 삐져나온거 자르기 */
 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
@@ -22,8 +22,7 @@
     object-fit: cover;
     object-position: center;
 
-    /* 하단에 미세한 공백이 생기는 걸 방지 */
-    display: block;
+
 }
 
 .content {
@@ -49,8 +48,8 @@
 /* 모바일 반응형 */
 @media (max-width: 768px) {
     .card {
-        width: 280px;
-        min-height: 220px;
+        width: 260px;
+        min-height: 200px;
     }
 
     .thumbnail {
@@ -68,52 +67,3 @@
     }
 }
 
-@media (max-width: 480px) {
-    .card {
-        width: 250px;
-        min-height: 200px;
-    }
-
-    .thumbnail {
-        height: 120px;
-    }
-
-    .blog_title {
-        font-size: 16px;
-        margin-bottom: 8px;
-        margin-top: 10px;
-    }
-
-    .description {
-        font-size: 12px;
-    }
-
-    .content {
-        margin: 3px;
-    }
-}
-
-@media (max-width: 414px) {
-    .card {
-        width: 220px;
-        min-height: 180px;
-    }
-
-    .thumbnail {
-        height: 110px;
-    }
-
-    .blog_title {
-        font-size: 14px;
-        margin-bottom: 6px;
-        margin-top: 8px;
-    }
-
-    .description {
-        font-size: 11px;
-    }
-
-    .content {
-        margin: 2px;
-    }
-}

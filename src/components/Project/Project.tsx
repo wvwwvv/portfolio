@@ -42,7 +42,6 @@ const Project = () => {
                              </div>
                              <img src={item.thumbnail_url}
                                   className={styles.thumbnail}
-                                  style={{width : 240, height: 200}}
                              />
                          </div>
 

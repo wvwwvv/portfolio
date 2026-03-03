@@ -25,23 +25,3 @@
         margin-left: 0;
     }
 }
-
-@media (max-width: 480px) {
-    .section {
-        padding: 40px 15px;
-    }
-
-    .title {
-        font-size: 28px;
-    }
-}
-
-@media (max-width: 414px) {
-    .section {
-        padding: 30px 10px;
-    }
-
-    .title {
-        font-size: 24px;
-    }
-}

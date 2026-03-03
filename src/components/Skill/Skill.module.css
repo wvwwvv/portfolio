@@ -1,3 +1,5 @@
+/* fin */
+
 .section {
     background-color: black;
     min-height: 100vh;
@@ -90,129 +92,55 @@ img {
     justify-content: center;
 }
 
-/* 모바일 반응형 */
 @media (max-width: 768px) {
     .section {
-        padding: 20px;
         min-height: auto;
         height: auto;
-        padding-bottom: 40px;
+        padding: 20px 20px 40px;
     }
 
     .title {
         font-size: 28px;
         margin-top: 20px;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
     }
 
     .all_contents {
         width: 95%;
-        padding: 10px;
+        padding: 8px;
     }
 
     .skills_row {
-        flex-direction: column;
+        flex-direction: column; /* 모바일 가로 짧아서 skill_category 와 아이콘들 세로로 분리 */
         height: auto;
-        margin-bottom: 20px;
-        text-align: center;
+        margin-bottom: 14px;
     }
 
     .skill_category {
         margin-left: 0;
-        margin-bottom: 15px;
         justify-content: center;
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .skills_container {
         margin-right: 0;
-        margin-top: 10px;
+        margin-top: 4px;
     }
 
     .skills {
-        flex-wrap: wrap;
-        justify-content: center;
         gap: 10px;
     }
 
     .icon_wrapper {
         margin-right: 8px;
-        margin-bottom: 10px;
+        margin-bottom: 2px;
         width: 50px;
         height: 50px;
     }
 
     .skills_icon {
-        width: 30px;
-        height: 30px;
+        width: 28px;
+        height: 28px;
     }
 }
 
-@media (max-width: 480px) {
-    .section {
-        padding: 15px;
-        padding-bottom: 30px;
-    }
-
-    .title {
-        font-size: 24px;
-        margin-bottom: 30px;
-    }
-
-    .all_contents {
-        width: 100%;
-        padding: 8px;
-    }
-
-    .skill_category {
-        font-size: 16px;
-        margin-bottom: 10px;
-    }
-
-    .icon_wrapper {
-        width: 45px;
-        height: 45px;
-        margin-right: 6px;
-    }
-
-    .skills_icon {
-        width: 25px;
-        height: 25px;
-    }
-
-    .skills {
-        gap: 8px;
-    }
-}
-
-@media (max-width: 414px) {
-    .section {
-        padding: 10px;
-        padding-bottom: 20px;
-    }
-
-    .title {
-        font-size: 20px;
-        margin-bottom: 20px;
-    }
-
-    .skill_category {
-        font-size: 14px;
-        margin-bottom: 8px;
-    }
-
-    .icon_wrapper {
-        width: 40px;
-        height: 40px;
-        margin-right: 5px;
-    }
-
-    .skills_icon {
-        width: 22px;
-        height: 22px;
-    }
-
-    .skills {
-        gap: 6px;
-    }
-}

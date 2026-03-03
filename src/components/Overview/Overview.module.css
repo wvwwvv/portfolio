@@ -1,3 +1,5 @@
+/* fin */
+
 .section {
     min-height: 100vh;
     padding: 50px;
@@ -27,42 +29,16 @@
     .section {
         height: 100vh;
         padding: 20px;
-        background-size: cover, cover;
-        background-position: center center, center center;
     }
 
     .title {
         font-size: 48px;
         padding: 0 10px;
         white-space: normal;
-        word-break: break-word;
+        word-break: break-word; /* 문장 길면 다음줄로 넘어가게 */
         line-height: 1.1;
     }
 }
 
-@media (max-width: 480px) {
-    .section {
-        height: 100vh;
-        padding: 15px;
-    }
 
-    .title {
-        font-size: 36px;
-        padding: 0 10px;
-        line-height: 1.1;
-    }
-}
-
-@media (max-width: 414px) {
-    .section {
-        height: 100vh;
-        padding: 10px;
-    }
-
-    .title {
-        font-size: 32px;
-        padding: 0 5px;
-        line-height: 1.1;
-    }
-}
 

@@ -1,8 +1,9 @@
+/* fin */
+
 .section {
     background-color: black;
     min-height: 100vh;
     padding: 50px;
-
 }
 
 .title {
@@ -28,7 +29,6 @@
     width: fit-content;
     border-radius: 12px;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* 변화 부드럽게 */
-
 }
 
 
@@ -43,7 +43,7 @@
 .content_odd {
     margin: 10px auto 40px 20px; /* 시계 방향 순서 상 우 하 좌*/
 
-    flex-direction: row-reverse;
+    flex-direction: row-reverse; /* 내부 요소 반대로 배치 */
 }
 
 .texts {
@@ -70,8 +70,8 @@
 
 .thumbnail {
     border-radius: 10px;
-    /*    width: 240px;
-        height: 240px; image 마다 적당한 크기 다를 수 있으니 tsx 에서 조절 */
+    width: 240px;
+    height: 200px;
 }
 
 
@@ -90,14 +90,11 @@
     }
 
     .all_contents {
-        width: 100%;
+        width: 100%; /* 모바일은 가로가 너무 작아서 100%으로 늘림 */
     }
 
     .content_even, .content_odd {
-        flex-direction: column !important; /* 무조건 세로로 쌓기 */
-        width: 100%;
-        margin: 20px 0;
-        align-items: center;
+        margin: 40px 0;
     }
 
     .texts {
@@ -107,73 +104,17 @@
     }
 
     .description {
-        max-width: 100%;
-        padding: 0 10px;
+        padding: 5px 10px;
     }
 
     .thumbnail {
-        width: 100% !important; /* 이미지가 화면 너비를 채우도록 */
-        height: auto !important;
+        /* 모바일에선 content_even, odd 의 margin을 설정하면 화면이 예쁘게 안나옴 : 가로가 너무 작아서
+         text 와 thumbnail을 margin 조금만 주어서 띄움 */
+        margin: 8px;
+        width: 184px;
+        height: 160px;
     }
 }
 
-@media (max-width: 480px) {
-    .section {
-        padding: 15px;
-    }
 
-    .title {
-        font-size: 24px;
-        margin-bottom: 30px;
-    }
-
-    .texts {
-        margin: 15px 0;
-    }
-
-    .project_title {
-        font-size: 18px;
-        margin-bottom: 12px;
-    }
-
-    .description {
-        font-size: 11px;
-        padding: 6px 12px;
-        line-height: 1.4;
-    }
-
-    .content_even, .content_odd {
-        margin: 15px 0;
-    }
-}
-
-@media (max-width: 414px) {
-    .section {
-        padding: 10px;
-    }
-
-    .title {
-        font-size: 20px;
-        margin-bottom: 20px;
-    }
-
-    .texts {
-        margin: 10px 0;
-    }
-
-    .project_title {
-        font-size: 16px;
-        margin-bottom: 10px;
-    }
-
-    .description {
-        font-size: 10px;
-        padding: 5px 10px;
-        line-height: 1.3;
-    }
-
-    .content_even, .content_odd {
-        margin: 10px 0;
-    }
-}
 

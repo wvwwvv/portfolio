@@ -47,39 +47,39 @@ const About = () => {
                 />
 
                 <div className={styles.profile_info}>
-                    <p style={{fontSize: 42, marginBottom: 20, fontWeight: 'bold'}}>{profile?.name}</p>
-                    <p style={{fontSize: 20, marginBottom: 20, fontWeight: 'bold'}}>{profile?.dev_type}</p>
-                    <p style={{fontSize: 16, marginBottom: 70}}>{profile?.comment}</p>
+                    <p className={styles.name}>{profile?.name}</p>
+                    <p className={styles.devType}>{profile?.dev_type}</p>
+                    <p className={styles.commentText}>{profile?.comment}</p>
 
                     {/* 프로필 - 소개 아래의 experience 2x2 그리드 */}
                     <div className={styles.experienceGrid}>
                         <div className={styles.experienceItem}>
-                            <p style={{fontWeight: 'bold', fontSize: 24, marginBottom: 20}}>📖 Activities</p>
+                            <p className={styles.experienceHeading}>📖 Activities</p>
                             {experience
                                 ?.filter((item) => item.category === 'Activities')
                                 .map((item, index) => (
-                                    <p key={index} style={{fontSize: 16, marginBottom: 10}}>{item.content}</p>
+                                    <p key={index} className={styles.experienceText}>{item.content}</p>
                                 ))}
                         </div>
 
                         <div className={styles.experienceItem}>
-                            <p style={{fontWeight: 'bold', fontSize: 24, marginBottom: 20}}>📚 Papers</p>
+                            <p className={styles.experienceHeading}>📚 Papers</p>
                             {experience
                                 ?.filter((item) => item.category === 'Papers')
                                 .map((item, index) => (
-                                    <p key={index} style={{fontSize: 16, marginBottom: 10}}>{item.content}</p>
+                                    <p key={index} className={styles.experienceText}>{item.content}</p>
                                 ))}
                         </div>
 
                         <div className={styles.experienceItem}>
-                            <p style={{fontWeight: 'bold', fontSize: 24, marginBottom: 20}}>🌍 Location</p>
-                            <p style={{fontSize: 16, marginBottom: 10}}>{profile?.location}</p>
+                            <p className={styles.experienceHeading}>🌍 Location</p>
+                            <p className={styles.experienceText}>{profile?.location}</p>
                         </div>
 
                         <div className={styles.experienceItem}>
-                            <p style={{fontWeight: 'bold', fontSize: 24, marginBottom: 20}}>🕧 Birth</p>
+                            <p className={styles.experienceHeading}>🕧 Birth</p>
 
-                            <p style={{fontSize: 16, marginBottom: 10}}>{profile?.birth_date}</p>
+                            <p className={styles.experienceText}>{profile?.birth_date}</p>
 
                         </div>
                     </div>
