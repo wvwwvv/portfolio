@@ -3,15 +3,244 @@
     min-height: 100vh;
     padding: 70px 50px 50px 50px;
     border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
 }
 
-.title {
+.header {
     text-align: center;
-    color : #FFCF0F;
-    font-size: 40px;
-    font-weight: bold;
-    margin-left: 40px;
+    margin-top: 20px;
 }
+
+/* Result */
+.subtitle1 {
+    font-size: 18px;
+    color : #FFCF0F;
+    margin-bottom: 14px;
+}
+
+/* .. 과의 궁합 결과 */
+.subtitle2 {
+    font-size : 26px;
+    margin-bottom: 80px;
+}
+
+/* 설명 배경 */
+.explain {
+    background-image: url("../../../public/images/DTTResultBackground.svg");
+    background-repeat: no-repeat;
+    background-size: cover; /* 이미지가 꽉 채우게 */
+    background-position: center;
+    border-radius: 32px; /* 모서리 둥글게 적용 */
+
+    width: 80%;
+    height: auto;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.explain_container {
+    margin: 60px auto 60px 60px;
+}
+
+.explain_header {
+    font-size: 32px;
+    margin-bottom: 40px;
+    line-height: 1.2;
+}
+
+.explain_text {
+    white-space: pre-wrap; /* db의 줄바꿈 인식 */
+    line-height: 1.6;
+    max-width: 75%;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.dev_button {
+    margin-top: 80px;
+    background-color: #FFCF0F;
+    color: black;
+    padding: 12px 32px;
+    border-radius: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.dev_button:hover {
+    background-color: #e6b800; /* 톤 다운 */
+}
+
+
+/* visitor 전체 테이블 */
+.visitors_table {
+    width: 60%;
+    margin-top: 96px;
+}
+
+
+.visitors_table_header {
+    display: flex;
+    padding: 6px 0;
+    margin-bottom: 20px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+
+}
+
+/* 헤더 */
+.visitors_table_number_header {
+    font-size: 24px;
+    min-width: 15%;
+    text-align: center;
+}
+
+.visitors_table_nickname_header {
+    font-size: 24px;
+    min-width: 60%;
+
+}
+
+.visitors_table_date_header {
+    font-size: 24px;
+    min-width: 25%;
+}
+
+
+/* 실제 값 */
+.visitors_table_number {
+    font-size: 20px;
+    min-width: 15%;
+    text-align: center;
+}
+
+.visitors_table_nickname {
+    font-size: 20px;
+    min-width: 60%;
+
+}
+
+.visitors_table_date {
+    font-size: 18px;
+    min-width: 20%;
+}
+
+.visitors_table_delete_button {
+    min-width: 5%;
+    background-image: url("../../../public/images/trash.svg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    opacity: 0.7;
+    padding: 8px;
+}
+
+.visitors_table_delete_button:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* 상세 정보 전체 */
+.visitors_info_container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 상세 정보 한 줄 (한 사람) */
+.visitor_info {
+    display: flex;
+    padding: 6px 0;
+}
+
+
+/* 모달 스타일 */
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* 가장 위에 우선순위 두고 표시 */
+}
+
+.modal_container {
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 400px;
+    width: 90%;
+    border: 1px solid #333;
+}
+
+.modal_header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.modal_content {
+    margin-bottom: 25px;
+}
+
+.modal_input {
+    width: 100%;
+    background-color: #1a1a1a;
+    border: none;
+    border-bottom: 2px solid white;
+    padding: 10px 0;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.modal_buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.modal_cancel_button,
+.modal_delete_button {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 100px;
+}
+
+.modal_cancel_button {
+    background-color: #444;
+    color: white;
+}
+
+
+.modal_delete_button {
+    background-color: #d32f2f;
+    color: white;
+}
+
+
+.modal_delete_button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
 
 /* 모바일 반응형 */
 @media (max-width: 768px) {
@@ -25,3 +254,4 @@
         margin-left: 0;
     }
 }
+

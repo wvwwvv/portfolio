@@ -21,7 +21,7 @@ function App() {
                 <Route path='/blogs/:slug' element={<BlogPost/>}/>
                 <Route path='/dtt/login' element={<DTTLogin/>}/>
                 <Route path='/dtt/test' element={<DTTTest/>}/>
-                <Route path='/dtt/result/:nickname' element={<DTTResult/>}/>
+                <Route path='/dtt/result' element={<DTTResult/>}/>
             </Routes>
         </BrowserRouter>
     </div>

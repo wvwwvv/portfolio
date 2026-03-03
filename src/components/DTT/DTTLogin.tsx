@@ -31,7 +31,7 @@ const DTTLogin = () => {
                 // nickname 존재할 때
                 if (user.password === password) {
                     // password 일치 : 결과 페이지 이동
-                    navigate(`/dtt/result/${nickname}`);
+                    navigate(`/dtt/result`, {state: {nickname, password}});
                 } else {
                     // password 불일치 : 안내 메시지
                     alert("이미 존재하는 닉네임입니다. 비밀번호를 확인해주세요.");

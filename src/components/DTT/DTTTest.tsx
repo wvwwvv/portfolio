@@ -65,7 +65,7 @@ const DTTTest = () => {
 
             if (user) {
                 alert("이미 검사를 마친 닉네임입니다. 결과 페이지로 이동합니다.");
-                navigate(`/dtt/result/${nickname}`);
+                navigate(`/dtt/result`, {state: {nickname}});
                 return;
             }
 
@@ -77,7 +77,7 @@ const DTTTest = () => {
             if (error) throw error;
 
             // 결과 페이지로 이동
-            navigate(`/dtt/result/${nickname}`);
+            navigate(`/dtt/result`, {state: {nickname}});
         } catch (err) {
             console.error(err);
             alert("데이터 저장 중 오류가 발생했습니다.");
