@@ -11,13 +11,14 @@ const Blog = () => {
     const navigate = useNavigate();
     const scrollRef = useRef<HTMLDivElement>(null);
 
+    /* blog db 정보 전부 가져오기 */
     const {data: blogs, isLoading, error} = useQuery<Blogs[]>({
         queryKey: ['blogs'],
         queryFn: async () => {
             const {data, error} = await supabase
                 .from('blog')
                 .select('*')
-                .order('id', {ascending: true});
+                .order('id', {ascending: true}); /* 오름차순 */
             if (error) throw error;
             return data;
         }
@@ -26,9 +27,9 @@ const Blog = () => {
     // scroll 제어
     const handleScroll = (dir : 'left' | 'right') => {
         if (scrollRef.current) {
-            const scrollAmount = 400; // 카드 넓이 정도로
+            const scrollAmount = 400; // 카드 넓이 정도로, 그런데 작은 모바일에서 카드 넓이 많이 줄일텐데..
             scrollRef.current.scrollBy({
-                left : dir === 'left' ? -scrollAmount : scrollAmount,
+                left : dir === 'left' ? -scrollAmount : scrollAmount, /* 왼쪽 버튼 누르면 스크롤 -400 */
                 behavior: 'smooth'
             });
         }
@@ -38,7 +39,6 @@ const Blog = () => {
     if (error) return <p>에러가 발생했습니다.</p>;
 
     return (
-
         <section id="blog" className={styles.section}>
             <h1 className={styles.title}>Blog</h1>
 
@@ -54,6 +54,7 @@ const Blog = () => {
                 <div className={styles.blog_container} ref={scrollRef}>
                     {blogs
                         ?.map((item) => (
+                            /* 미리 public 에 저장해둔 md 파일 */
                             <div onClick={() => navigate(`/blogs/${item.slug}`)}>
                                 <BlogCard key={item.id} blog={item}/>
                             </div>

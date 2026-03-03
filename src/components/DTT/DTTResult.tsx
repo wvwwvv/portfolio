@@ -96,6 +96,7 @@ const DTTResult = () => {
         }
 
         try {
+            /* 입력 비번과 해당 사람의 비번 같아야 삭제 */
             if (selectedUser.password !== password) {
                 alert("비밀번호가 틀렸습니다.");
                 handleModalClose();
@@ -119,7 +120,6 @@ const DTTResult = () => {
             alert("삭제중 오류가 발생했습니다.");
         }
     }
-
 
 
 

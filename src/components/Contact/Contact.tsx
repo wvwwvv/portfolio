@@ -5,6 +5,7 @@ import type {ContactInfo} from "../../types/ContactInfo.ts";
 
 const Contact = () => {
 
+    /* 포트폴리오 관리자 contact 정보 가져오기 */
     const {data: contact, isLoading, error} = useQuery<ContactInfo>({
         queryKey: ['contact'],
         queryFn: async () => {

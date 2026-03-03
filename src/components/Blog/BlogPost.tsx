@@ -15,12 +15,12 @@ const BlogPost = () => {
     const [content, setContent] = useState(''); // md 내용
     const [loadingMd, setLoadingMd] =useState(true);
 
-    // 뒤로가기
+    // 뒤로가기 - 여기서는 blog 로
     const handleClick = (to: String) => {
         navigate('/', {state: {scrollTo: to}});
     };
 
-    // db 조회
+    // 블로그 정보 db 조회
     const {data: blog, isLoading, error} = useQuery<Blogs>({
         queryKey: ['blogDetail', slug],
         queryFn: async() => {
@@ -28,7 +28,7 @@ const BlogPost = () => {
                 .from('blog')
                 .select('*')
                 .eq('slug', slug)
-                .single();
+                .single(); /* single 명시하지 않으면 객체 1개라도 배열로 들어옴 */
             if (error) throw error;
             return data;
         }
@@ -42,7 +42,6 @@ const BlogPost = () => {
                 if (!response.ok) throw new Error('Not found');
                 const text = await response.text();
                 setContent(text);
-
             } catch {
                 setContent('');
             } finally {
@@ -60,6 +59,7 @@ const BlogPost = () => {
     return (
         <section className={styles.section}>
             <div className={styles.title_head}>
+                {/* 뒤로가기 버튼 */}
                 <div onClick={() => handleClick('blog')} className={styles.back_button}></div>
                 <p className={styles.blog_title}> {blog?.title}</p>
             </div>

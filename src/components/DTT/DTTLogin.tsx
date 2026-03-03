@@ -27,8 +27,10 @@ const DTTLogin = () => {
 
             if (error) throw error;
 
-            if (user) { //
-                // nickname 존재할 때
+
+            /* 분기 처리 필요 */
+            if (user) {
+                // nickname 이미 db에 존재할 때
                 if (user.password === password) {
                     // password 일치 : 결과 페이지 이동
                     navigate(`/dtt/result`, {state: {nickname, password}});
@@ -37,8 +39,8 @@ const DTTLogin = () => {
                     alert("이미 존재하는 닉네임입니다. 비밀번호를 확인해주세요.");
                 }
             } else {
-                // nickname 존재하지 않을 때 : 검사페이지로
-                // state 로 닉, 비번 저장해서 넘겨줌
+                // nickname 존재하지 않을 때 : 처음 방문한 유저이므로 검사페이지로 이동
+                // state 로 닉네임, 비번 저장해서 테스트 페이지로 넘겨줌
                 navigate('/dtt/test', {state: {nickname, password}});
             }
         } catch (err) {

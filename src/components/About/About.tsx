@@ -7,6 +7,8 @@ import type {Experience} from "../../types/Experience.ts";
 
 const About = () => {
 
+    /* 포트폴리오 관리자의 프로필 정보 가져오기
+    * 단 1개의 row 있다고 가정 */
     const {data: profile, isLoading : isProfileLoading, error : pError} = useQuery<Profile>({
         queryKey: ['profile'],
         queryFn: async () => {
@@ -19,6 +21,8 @@ const About = () => {
         }
     });
 
+    /* 포트폴리오 관리자의 experience 테이블 정보 모두 불러오기
+    * 일반적인 경우 *로 모두 불러오는건 배열로 저장 */
     const {data: experience, isLoading : isExperienceLoading, error: eError} = useQuery<Experience[]>({
         queryKey: ['experience'],
         queryFn: async () => {
@@ -40,9 +44,10 @@ const About = () => {
             <h1 className={styles.title}>About</h1>
 
             <div className={styles.content}>
+                {/* 프로필 이미지 */}
                 <img
                     src={profile?.profile_url}
-                    alt={`${profile?.name || '프로필'} 사진`}
+                    alt={`${profile?.name}`}
                     className={styles.profile_image}
                 />
 
@@ -51,10 +56,11 @@ const About = () => {
                     <p className={styles.devType}>{profile?.dev_type}</p>
                     <p className={styles.commentText}>{profile?.comment}</p>
 
-                    {/* 프로필 - 소개 아래의 experience 2x2 그리드 */}
+                    {/* 프로필 소개 아래의 experience 2x2 그리드 */}
                     <div className={styles.experienceGrid}>
                         <div className={styles.experienceItem}>
                             <p className={styles.experienceHeading}>📖 Activities</p>
+                            {/* db에서 Activities 카테고리만 추출 */}
                             {experience
                                 ?.filter((item) => item.category === 'Activities')
                                 .map((item, index) => (
@@ -84,7 +90,6 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-
 
             </div>
 
