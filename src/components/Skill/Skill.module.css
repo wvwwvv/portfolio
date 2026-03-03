@@ -144,3 +144,55 @@ img {
     }
 }
 
+@media (max-width: 436px) {
+    .section {
+        min-height: auto;
+        height: auto;
+        padding: 20px 20px 40px;
+    }
+
+    .title {
+        font-size: 28px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .all_contents {
+        width: 95%;
+        padding: 6px;
+    }
+
+    .skills_row {
+        flex-direction: column; /* 모바일 가로 짧아서 skill_category 와 아이콘들 세로로 분리 */
+        height: auto;
+        margin-bottom: 12px;
+    }
+
+    .skill_category {
+        margin-left: 0;
+        justify-content: center;
+        font-size: 12px;
+    }
+
+    .skills_container {
+        margin-right: 0;
+        margin-top: 2px;
+    }
+
+    .skills {
+        gap: 6px;
+    }
+
+    .icon_wrapper {
+        margin-right: 6px;
+        margin-bottom: 2px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .skills_icon {
+        width: 24px;
+        height: 24px;
+    }
+}
+
