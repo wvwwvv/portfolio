@@ -91,6 +91,7 @@
 
     .all_contents {
         width: 100%; /* 모바일은 가로가 너무 작아서 100%으로 늘림 */
+
     }
 
     .content_even, .content_odd {
