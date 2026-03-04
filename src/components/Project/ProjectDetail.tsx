@@ -48,6 +48,12 @@ const ProjectDetail = () => {
                 <p className={styles.content_text}>{project.role}</p>
                 <p className={styles.content_title}>사용 기술</p>
                 <p className={styles.content_text}>{project.skill}</p>
+                <a
+                    className={styles.content_github_link}
+                    href={project?.github_url}
+                    target="_blank"
+                    title="To Github"
+                ></a>
 
 
                 {/* 상세 이미지들 출력 */}
