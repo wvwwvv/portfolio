@@ -12,7 +12,7 @@ const Header = () => {
 
     const handleClick = (to: String) => {
         if (!isHome) {
-            navigate('/', {state: {scrollTo: to}});
+            navigate('/', {state: {scrollTo: to}}); /* / 으로 먼저 이동, state로 스크롤할 위치가 to */
         }
     };
 

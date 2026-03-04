@@ -23,7 +23,7 @@ const Home = () => {
                     smooth: true,
                     offset: -80
                 });
-            }, 100);
+            }, 100); /* 지연시간 100ms : 렌더링 확실히 된 후 실행 위해서 */
 
             window.history.replaceState({}, document.title);
         }

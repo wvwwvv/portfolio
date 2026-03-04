@@ -52,13 +52,14 @@ const DTTResult = () => {
         }
     });
 
-    /* 방문자 db 정보 가져오기 */
+    /* 방문자 db 정보 가져오기 (deleted_at이 null인 것만) */
     const {data: visitors, isLoading: visitorsIsLoading, error: visitorsError} = useQuery<LoginUser[]>({
         queryKey: ['visitors'],
         queryFn: async () => {
             const {data, error} = await supabase
                 .from('visitor')
                 .select('*')
+                .is('deleted_at', null) /* null 이 아니면 지운 것 */
             if (error) throw error;
             return data;
         }
@@ -103,10 +104,10 @@ const DTTResult = () => {
                 return;
             }
 
-            /* 방명록에서 휴지통 누른 위치의 유저를 상태변수에 넣고, 해당 닉네임으로 db에서 삭제 */
+            /* 방명록에서 휴지통 누른 위치의 유저를 상태변수에 넣고, 해당 닉네임으로 soft delete (deleted_at 업데이트) */
             const {error} = await supabase
                 .from('visitor')
-                .delete()
+                .update({ deleted_at: new Date().toISOString() }) /* soft delete */
                 .eq('nickname', selectedUser.nickname);
 
             if (error) throw error;
